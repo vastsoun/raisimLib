@@ -55,6 +55,14 @@ install(
         ${CMAKE_INSTALL_PREFIX}
 )
 
+file(
+  COPY
+  "${CMAKE_CURRENT_LIST_DIR}/raisim/${RAISIM_BIN_DIR}/include"
+  "${CMAKE_CURRENT_LIST_DIR}/raisim/${RAISIM_BIN_DIR}/lib"
+  DESTINATION
+  ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 if(RAISIM_ALL)
     set(RAISIM_EXAMPLE TRUE)
     set(RAISIM_MATLAB TRUE)
